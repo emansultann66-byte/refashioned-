@@ -1,0 +1,1223 @@
+/* styles applied for all pages */
+/* reset default margin and padding setting consistent box sizing */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transitions for interactive elements */
+}
+
+/* Base body style for all pages with white background and black text*/
+body { 
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+h2 /* Section heading style added this to make spacing and consistent */ 
+{
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  padding: 0px 20px;
+}
+
+/* ensures all the available space is used */
+main {
+  flex: 1;
+}
+/* accessibility that shows focus for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid #f40e0e;
+  outline-offset: 2px;
+}
+
+/* header and navigation */
+.header { 
+  background: #000;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* navigation bar styles */
+.nav { 
+  display: flex;
+  justify-content: space-evenly;
+  padding: 8px 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* navigation button style */
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 20px 30px;
+  background: #000;
+  transition: background 0.3s;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+/* hover and focus effect for navigation buttons */
+.nav a:hover,
+.nav a:focus { 
+  background: #f40e0e;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* shows the navigation button for current page in red bg */
+.nav a[aria-current="page"] {
+  background: #f40e0e;
+}
+
+/* footer */
+footer { 
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 18px 30px;
+  margin-top: 60px;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  width: 100%;
+}
+
+/* HOME PAGE STYLES */
+.mainSection { 
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* main heading style */
+.mainSection h1 { 
+  font-family: Arial, sans-serif;
+  font-size: 46px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* main paragraph style */
+.mainSection p { 
+  font-size: 22px;
+  font-family: Georgia, serif;
+}
+
+/* mission statement section */
+.mission {
+  text-align: center;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* mission heading style */
+.mission h2 {
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+/* mission paragraph style */
+.mission p {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  line-height: 1.8;
+  color: #000;
+}
+
+/* globe section styles */
+.globe-section {
+  text-align: center;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* globe section heading style */
+.globe-section h2 {
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Globe section paragraph style */
+.globe-section p {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+/* Gen Z revival section */
+.revival-section { 
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px 20px;
+}
+/* revival section heading style */
+.revival-section h2 { 
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Revival section paragraph style */
+.revival-section p { 
+  font-size: 22px;
+  line-height: 1.8;
+  font-family: Georgia, serif;
+}
+
+/* Text with side image layout */
+.text-with-image { 
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+/* Introductory text style */
+.intro-text { 
+  font-size: 22px;
+  line-height: 1.8;
+  flex: 1;
+  color: #000;
+  font-family: Georgia, serif;
+}
+
+/* Side image style */
+.side-image { 
+  width: 280px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Side image element style */
+.side-image img { 
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  border: 4px solid white;
+}
+
+/* Side image caption style */
+.side-image p { 
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+
+/* Images between text sections */
+.between-images { 
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 50px 0;
+}
+/* individual image container style so that images are centered */
+.between-item { 
+  width: 180px;
+  text-align: center;
+}
+
+.between-item img { 
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  border: 4px solid white;
+}
+
+/* Caption for images between text */
+.between-item p { 
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+
+/* Globe with tooltips */
+.globe-container { 
+  position: relative;
+  width: 400px;
+  margin: 20px auto;
+}
+
+/* Globe image style */
+.globe-container img { 
+  width: 100%;
+}
+
+/* Tooltip styles */
+.tooltip {
+  position: absolute;
+  background: #fff;
+  padding: 8px;
+  border: 1px solid #ccc;
+  display: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Tooltip heading style */
+.tooltip img { 
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 6px;
+  display: block;
+}
+
+/* Tooltip positions */
+#tooltip-japan { top: 10px; right: 0; }
+#tooltip-india { bottom: 10px; right: 30px; }
+#tooltip-france { top: 20px; left: 0; }
+#tooltip-nigeria { bottom: 10px; left: 30px; }
+
+/* GLOBAL REVIVAL PAGE STYLES */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+}
+
+/* Accordion button styles */
+.accordion-btn {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+  border: none;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid #333;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+}
+
+/* Hover and focus effect for accordion buttons */
+.accordion-btn:hover,
+.accordion-btn:focus {
+  background-color: #f40e0e;
+}
+
+/* acccordion button active state */
+.accordion-btn.active {
+  background-color: #f40e0e;
+  color: white;
+}
+
+
+/* accordion panel styles */
+.accordion-panel {
+  display: none;
+  padding: 15px;
+  background-color: #1a1a1a;
+  color: white;
+  margin-bottom: 10px;
+  overflow: hidden;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+/* Open state for accordion panel */
+.accordion-panel.open { 
+  display: block;
+}
+
+/* Images inside accordion panels */
+.accordion-panel img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.image-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.image-row img {
+  flex: 1 1 0;
+  max-width: none;
+  height: 220px;
+  width: 100%;
+  object-fit: contain;
+  background: transparent;
+  padding: 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* TREND TIMELINE PAGE STYLES */
+.intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Intro heading style */
+.intro h1 {
+  font-family:  Arial, sans-serif;
+  font-size: 48px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Intro paragraph style */
+.intro p {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  line-height: 1.8;
+}
+
+/* Timeline information section */
+.timeline-info {
+  max-width: 800px;
+  margin: 40px auto 60px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Timeline info heading style */
+.timeline-info h2 {
+  font-family:  Arial, sans-serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Timeline info paragraph style */
+.timeline-info p {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* Evolution text section */
+.evolution-text {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.evolution-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.evolution-section h2 {
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+/* Evolution content blocks */
+.evolution-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Individual evolution block style */
+.evolution-block {
+  background: #000;
+  color: white;
+  padding: 30px;
+  border-left: 6px solid #f40e0e;
+  position: relative;
+}
+
+/* Evolution block heading style */
+.evolution-block h3 {
+  font-family: Arial, sans-serif;
+  font-size: 26px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.evolution-block p {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* timeline with scrollable container */
+.timeline-wrapper { 
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+/* Scrollable timeline container */
+.timeline-container { 
+  overflow-x: auto;
+  flex: 1 1 auto;
+  scroll-behavior: smooth;
+}
+
+/* Timeline flexbox */
+.timeline { 
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* Decade blocks containing hover effect */
+.event { 
+  min-width: 280px;
+  text-align: center;
+  background: #fff;
+  color: #000;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.event img { 
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+/* Hover and focus effect for block elements */
+.event:hover img,
+.event:focus img { 
+  transform: scale(1.12);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* Lift effect on hover and focus */
+.event:hover,
+.event:focus { 
+  z-index: 5;
+  transform: translateY(-6px); /* Lift the block */
+  transition: transform 180ms ease;
+}
+
+/* Modal popup */
+.modal { 
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+/* Modal content box */
+.modal-content { 
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  width: 92%;
+  max-width: 680px;
+  padding: 20px 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the modal */
+}
+
+/* Close button styles */
+.close-modal { 
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Hover and focus effect for close button */
+.close-modal:hover,
+.close-modal:focus {
+  color: #f40e0e;
+}
+
+.modal-content h2 { 
+  font-family: Arial, sans-serif;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.modal-content p { 
+  font-family: Georgia, serif;
+  line-height: 1.6;
+}
+
+/* Minimalist vs Maximalist page styles */
+.comparison-wrapper {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Comparison slider container */
+.comparison-slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border: 3px solid #000;
+  background: #f5f5f5;
+}
+
+.slider-label {
+  position: absolute;
+  top: 20px;
+  font-weight: bold;
+  font-size: 22px;
+  font-family: Arial, sans-serif;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 4px;
+  z-index: 5;
+  pointer-events: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Slider labels for left and right */
+.slider-label.left { left: 20px; }
+.slider-label.right { right: 20px; }
+
+.slider-section {
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  background: #f5f5f5;
+}
+
+.minimalist-section {
+  left: 0;
+  width: 50%;
+}
+
+.maximalist-section {
+  right: 0;
+  width: 50%;
+}
+/*image track inside each section */
+.image-track {
+  display: flex;
+  height: 100%;
+  width: 300%;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.image-track img {
+  width: 33.333%;
+  height: 100%;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Draggable divider */
+.resize-handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #f40e0e;
+  cursor: ew-resize;
+  z-index: 10;
+  transform: translateX(-2px);
+  transition: left 0.1s ease;
+}
+/* Red circle on the divider */
+.resize-handle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: #f40e0e;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+/* Focus effect for divider */
+.resize-handle:focus::before {
+  opacity: 1;
+  box-shadow: 0 0 0 3px white;
+}
+
+/* EAST MEETS WEST PAGE STYLES */
+.carousel-wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Carousel container */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 3px solid #000;
+  margin-bottom: 20px;
+}
+
+/* Carousel flexbox */
+.carousel {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+  background: #f5f5f5;
+}
+
+.carousel-content {
+  padding: 25px;
+  background: #fff;
+  border-top: 1px solid #000;
+}
+
+.carousel-content h3 {
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  margin: 0 0 15px 0;
+  font-weight: bold;
+}
+
+.carousel-content p {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  line-height: 1.8;
+  margin: 0;
+}
+/* carousel controls that contain buttons and dots */
+.carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.carousel-btn {
+  background: #000;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 0;
+  font-weight: bold;
+}
+
+/* Hover and focus effect for carousel buttons */
+.carousel-btn:hover,
+.carousel-btn:focus {
+  background: #f40e0e;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex: 1;
+}
+/* Individual dot styles */
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+/* hover and focus effect */
+.dot:hover,
+.dot:focus {
+  background: #999;
+}
+
+/* Active dot style */
+.dot.active {
+  background: #f40e0e;
+  border: 2px solid #000;
+  width: 14px;
+  height: 14px;
+}
+
+/* for accessibility screen reader style */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* SUSTAINABILITY PAGE STYLES */
+.fact-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Individual fact card styles */
+.fact-card {
+  background: #fff;
+  border: 3px solid #000;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover and focus effect for fact cards */
+.fact-card:hover,
+.fact-card:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(244, 14, 14, 0.2);
+}
+
+/* Fact card header styles */
+.fact-card-header {
+  background: #000;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+.fact-card:hover .fact-card-header,
+.fact-card-header:focus {
+  background: #f40e0e;
+}
+
+/* Fact card icon styles */
+.fact-card-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.fact-card-content {
+  padding: 20px;
+  background: #f5f5f5;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Open state for fact card content */
+.fact-card-content.open {
+  max-height: 500px;
+}
+
+.fact-card-content p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+/* For Sustainable Style page - make image cover full paragraph height */
+.revival-section .text-with-image {
+  align-items: stretch;
+}
+
+.revival-section .side-image {
+  display: flex;
+  flex-direction: column;
+}
+/* the images take full height so paragraph is aligned */
+.revival-section .side-image img {
+  height: 100%;
+  min-height: 280px;
+  flex: 1;
+}
+
+/* YOUR STYLE PAGE STYLES */
+.style-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+/* Style category button styles */
+.style-btn {
+  background: #fff;
+  border: 3px solid #000;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+}
+/* hover and focus effect for style buttons */
+.style-btn:hover,
+.style-btn:focus {
+  background: #f40e0e;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* red background on buttons shows selected category */
+.style-btn.active {
+  background: #f40e0e;
+  color: white;
+}
+/* Upload form section styles */
+.upload-form-section {
+  background: #fff;
+  border: 3px solid #000;
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.upload-form-section h2 {
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+/* red asterisk for required fields */
+.required {
+  color: #f40e0e;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #000;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #f40e0e;
+  outline: none;
+}
+
+/* Red border for invalid fields */
+.form-group input.invalid,
+.form-group textarea.invalid {
+  border-color: #dc3545;
+  background-color: #fff5f5;
+}
+
+/* textarea specific styles */
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* error message under fields */
+.field-error {
+  display: block;
+  color: #dc3545;
+  font-size: 16px;
+  margin-top: 5px;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+}
+/* help text under fields so that users can understand the requirements */
+.field-help {
+  display: block;
+  color: #666;
+  font-size: 16px;
+  margin-top: 5px;
+  font-family: Arial, sans-serif;
+}
+/* submit button styles */
+.form-group button {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-family:  Arial, sans-serif;
+}
+/* hover and focus effect for submit button */
+.form-group button:hover,
+.form-group button:focus {
+  background: #f40e0e;
+  transform: scale(1.05);
+}
+/* success message that appears on form submission after submitting */
+.success-message {
+  display: none;
+  background: #000;
+  color: white;
+  padding: 20px;
+  border: 3px solid #f40e0e;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  animation: slideIn 0.3s ease;
+}
+
+/* slide in animation for messages */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* error message that appears on form submission failure */
+.error-message {
+  display: none;
+  background: #dc3545;
+  color: white;
+  padding: 20px;
+  border: 3px solid #a71d2a;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  border-radius: 4px;
+  animation: slideIn 0.3s ease;
+}
+
+/* character counter for your story description*/
+.char-counter {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+  font-family: Arial, sans-serif;
+}
+/* warning color when near the limit given */
+.char-counter.warning {
+  color: #ff9800;
+}
+
+.char-counter.error {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* for making it mobile responsive or smaller screens */
+@media (max-width: 768px) {
+  /* Ensure no horizontal scroll on mobile */
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Navigation full width on mobile */
+  .header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Stack navigation vertically on mobile  */
+  .nav {
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    padding: 8px;
+  }
+
+  .nav a {
+    padding: 10px 20px;
+    width: 100%;
+  }
+  
+  /* Footer full width on mobile */
+  footer {
+    width: 100%;
+    margin: 40px 0 0 0;
+    padding: 20px 16px;
+  }
+
+  /* Smaller headings for mobile */
+  .mainSection h1 {
+    font-size: 32px;
+  }
+
+  /* Stack text and image */
+  .text-with-image {
+    flex-direction: column;
+  }
+
+  .side-image {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  /* Stack between the images which are between text sections */
+  .between-images {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  /* Smaller comparison slider */
+  .comparison-slider {
+    height: 300px;
+  }
+
+  /* Smaller carousel images */
+  .carousel-item img {
+    height: 300px;
+  }
+
+  /* Stack style buttons */
+  .style-buttons {
+    flex-direction: column;
+  }
+
+  .style-btn {
+    width: 100%;
+  }
+
+  /* smaller image rows three in each accordion */
+  .image-row img {
+    height: 120px;
+  }
+  
+  /* smaller image rows three in each accordion */
+  .image-row img {
+    height: 120px;
+  }
+  
+  /* timeline images on mobile */
+  .event {
+    min-width: 200px;
+  }
+  
+  .event img {
+    height: 200px;
+  }
+  
+  /* timeline wrapper on mobile */
+  .timeline-wrapper {
+    padding: 0 10px;
+  }
+
+  /* Ensure modal is responsive on mobile */
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+} 

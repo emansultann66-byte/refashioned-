@@ -1,0 +1,137 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>   
+  <title>Trend Timeline</title>    
+  <meta charset="UTF-8" />    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+  <link rel="stylesheet" href="CSStyle.css" />  <!-- Link to external CSS file -->
+</head> 
+<body>    
+  <!-- Header section with navigation menu -->   
+  <header class="header">     
+    <nav class="nav">            
+      <a href="index.html">Home</a>       
+      <a href="GlobalRevival.html">Global Revival</a>       
+      <a href="TrendTimeline.html">Trend Timeline</a>       
+      <a href="MinimalistVsMaximalist.html">Minimalist vs Maximalist</a>  
+      <a href="EastMeetsWest.html">East Meets West</a>         
+      <a href="SustainableStyle.html">Sustainable Style</a>          
+      <a href="YourStyle.html">Your Style</a>     
+    </nav>   
+  </header>    
+
+  <main>     
+    <!-- Introductory section for the Trend Timeline page -->     
+    <section class="mainSection">       
+      <h1>Trend Timeline</h1>       
+      <p>Scroll through the decades to explore how fashion evolved and how Gen Z is reviving iconic styles.</p>     
+    </section>      
+
+    <!-- Informational section about fashion evolution -->     
+    <div class="timeline-info">       
+      <h2>Fashion Evolution Through the Decades</h2>       
+      <p>From the bold, maximalist energy of the 1980s to the sustainable, authentic style of today...</p>     
+    </div>      
+
+    <!-- Timeline carousel with navigation buttons -->     
+    <div class="timeline-wrapper">       
+      <!-- Left scroll button -->       
+      <button class="nav-btn" onclick="scrollTimeline(-1)">⮜</button>         
+      <!-- Container for timeline events -->       
+      <div class="timeline-container" id="timelineContainer">         
+        <div class="timeline">           
+          <!-- Each event represents a fashion decade -->           
+          <div class="event" onclick="showModal('1980s')">             
+            <img src="images/s1980.jpg" alt="1980s" />             
+            <span>1980s</span>           
+          </div>           
+          <div class="event" onclick="showModal('1990s')">             
+            <img src="images/s1990.jpg" alt="1990s" />             
+            <span>1990s</span>           
+          </div>           
+          <div class="event" onclick="showModal('2000s')">             
+            <img src="images/2000s.jpg" alt="2000s" />             
+            <span>2000s</span>           
+          </div>           
+          <div class="event" onclick="showModal('2010s')">             
+            <img src="images/2010s.jpg" alt="2010s" />             
+            <span>2010s</span>           
+          </div>           
+          <div class="event" onclick="showModal('2020s')">             
+            <img src="images/2020s.jpg" alt="2020s" />             
+            <span>2020s</span>           
+          </div>         
+        </div>       
+      </div>       
+      <!-- Right scroll button -->       
+      <button class="nav-btn" onclick="scrollTimeline(1)">⮞</button>     
+    </div>     
+
+    <!-- Modal popup for detailed info on each decade -->     
+    <div id="infoModal" class="modal">       
+      <div class="modal-content">         
+        <!-- Close button for modal -->         
+        <span class="close-modal" onclick="closeModal()">&times;</span>         
+        <!-- Title and text dynamically filled via JavaScript -->         
+        <h2 id="modalTitle"></h2>         
+        <p id="modalText"></p>       
+      </div>     
+    </div>      
+    <!-- Hidden fashion info for each decade -->
+     <div id="fashionData" style="display: none;">
+        <div id="info1980s">Bold neons, power suits, and big hair were popular in the 1980s. Fashion was loud and expressive, with a focus on individuality.</div>
+        <div id="info1990s">Grunge and minimalism were big in the 1990s. People wore flannel shirts and ripped jeans were common. Fashion struck with a sense of rebellion.</div>
+        <div id="info2000s">Y2K fashion had low-rise jeans and shiny clothes. Pop culture influenced a lot of styles. sparkles were everywhere, and logos were a must.</div>
+        <div id="info2010s">Athleisure and social media trends were everywhere. Fashion was fast and shared online . skinny jeans became a staple, crop tops were popular.</div>
+        <div id="info2020s">Gen Z likes thrifting and vintage clothes. Fashion is more about personal style and being eco-friendly.But, baggy style is the most preferred amongst young people.</div>
+    </div>
+    <!-- Section discussing fashion's cyclical nature -->     
+    <section class="evolution-section">       
+      <h2>Fashion Keeps Evolving: The Cycle of Revival</h2>       
+      <p class="evolution-text">         
+        Fashion is cyclical, what was once considered outdated returns transformed by new generations in better ways. Gen Z is at the forefront of this revival, blending nostalgia with modern values like sustainability and individuality. </p>             
+      
+      <!-- Blocks explaining different aspects of fashion evolution -->       
+      <div class="evolution-content">         
+        <div class="evolution-block">           
+          <h3>The Pattern of Change</h3>           
+          <p>Fashion does not move forward in a straight path; it loops, adapts, and reinvents itself. Each era builds on the creativity of the one before, combining nostalgia with innovation. Designers and wearers alike reinterpret familiar ideas to create something that feels both classic and new at the same time.</p>         
+        </div>          
+
+        <div class="evolution-block">           
+          <h3>Why Fashion Repeats Every 20-30 Years</h3>           
+          <p>Historians have observed that fashion often returns in cycles that last two to three decades. As new generations come of age, they rediscover and redefine what their parents or grandparents once wore. This repetition connects people across time and keeps cultural identity alive through clothing and style.</p>         
+        </div>          
+
+        <div class="evolution-block">           
+          <h3>Gen Z: The Conscious Revivalists</h3>           
+          <p>Gen Z approaches fashion revival with awareness and creativity. They value authenticity, sustainability, and individuality, often thrifting or repurposing garments rather than buying new ones. By mixing digital trends with real-world ethics, they turn fashion into a form of personal expression and social responsibility.</p>         
+        </div>          
+
+        <div class="evolution-block">           
+          <h3>The Acceleration of Trends</h3>           
+          <p>Today’s fashion cycles move faster than ever before, thanks to social media and online culture. Trends that once evolved over years can now emerge and fade within months. This rapid exchange of ideas allows for more experimentation, but also challenges people to think carefully about consumption and long-term value.</p>         
+        </div>          
+
+        <div class="evolution-block">           
+          <h3>What Stays, What Changes, What Returns</h3>           
+          <p>Not every style makes a comeback, but the ones that do often carry emotional or cultural meaning. Timeless silhouettes, expressive patterns, and influential designs are reimagined for new audiences. Fashion keeps what matters, transforms what needs updating, and lets go of what no longer resonates.</p>         
+        </div>          
+
+        <div class="evolution-block">           
+          <h3>Your Role in Fashion's Future</h3>           
+          <p>Every individual plays a part in shaping the next wave of fashion. By choosing to reuse, upcycle, or invest in sustainable brands, you influence the industry’s direction. Your personal choices and creativity help define what fashion will look like tomorrow and how it can better serve people and the planet.</p>         
+        </div>       
+      </div>     
+    </section>   
+  </main>    
+  
+  <!-- Footer section -->
+  <footer>     
+    <p>Created by Eman Sultan</p>   
+  </footer>    
+
+  <script src="myScript.js"></script> <!-- Link to external JavaScript file for interactivity -->
+</body> 
+</html>
+

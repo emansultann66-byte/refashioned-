@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Style Studio</title>
+  <link rel="stylesheet" href="CSStyle.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+
+  <!-- Header section with navigation menu and links of other pages -->
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="GlobalRevival.html">Global Revival</a>
+      <a href="TrendTimeline.html">Trend Timeline</a>
+      <a href="MinimalistVsMaximalist.html">Minimalist vs Maximalist</a>
+       <a href="EastMeetsWest.html">East Meets West</a>
+      <a href="SustainableStyle.html">Sustainable Style</a>
+      <a href="YourStyle.html">Your Style</a>
+    </nav>
+  </header>
+
+  <!-- Main section for Your Style Studio where users can share their fashion ideas -->
+  <section class="mainSection">
+    <h1>Your Style Studio</h1>
+    <p>Where individuality meets sustainability. Share your DIY fashion, thrift finds, and styling ideas.</p>
+  </section>
+
+  <section class="revival-section">
+    <h2>This Space Is Yours</h2>
+    <p>Fashion is personal. It's about expressing who you are, experimenting with identity, and celebrating your unique creative voice. At Your Style Studio, we believe every outfit tells a story. Whether you've upcycled a vintage piece, styled a thrifted find, created a DIY project, or simply combined items in a way that feels authentically you—your style deserves to be shared. This is a judgment-free space where creativity thrives and individuality is celebrated.</p>
+
+    <div class="text-with-image">
+      <p class="intro-text">
+        The most beautiful fashion moments happen when personal style authenticity shines through. Your story matters. Every DIY stitch, every thrifted treasure, every styling experiment contributes to a larger movement where fashion becomes a form of self-expression and activism. Gen Z understands that fashion is more than clothing—it's identity, values, and creativity combined. Share your perspective, your process, and your passion. When you do, you inspire others to question trends, embrace their uniqueness, and build wardrobes that feel genuinely, unapologetically theirs.</p>
+
+      <div class="side-image">
+        <img src="images/personal2.jpg" alt="Personal Style Expression">
+        <p>Your Unique Voice</p>
+      </div>
+    </div>
+
+   <!-- Section for style category selection and submission form -->
+    <h2>Choose Your Category</h2>
+    <p>Click a category to focus on the type of style content you want to share.</p>
+
+   <!-- buttons for style category selection -->
+    <div class="style-buttons">
+      <button class="style-btn active" onclick="selectCategory(event, 'all')">All Styles</button>
+      <button class="style-btn" onclick="selectCategory(event, 'diy')">DIY & Upcycling</button>
+      <button class="style-btn" onclick="selectCategory(event, 'thrift')">Thrift Hauls</button>
+      <button class="style-btn" onclick="selectCategory(event, 'outfit')">Outfit Styling</button>
+      <button class="style-btn" onclick="selectCategory(event, 'sustainable')">Sustainability Tips</button>
+    </div>
+
+    <div class="between-images">
+      <div class="between-item">
+        <img src="images/inspo.jpg" alt="Community Creations">
+        <p>Community Creations</p>
+      </div>
+      <div class="between-item">
+        <img src="images/skirtupgrade.jpg" alt="Shared Inspiration">
+        <p>Shared Inspiration</p>
+      </div>
+    </div>
+
+    <!-- section for users to upload their styles -->
+    <div class="upload-form-section">
+      <div class="success-message" id="successMessage">
+        Thank you for sharing your style! Your submission adds to our community of creative, conscious fashionistas.
+      </div>
+
+      <!-- Error messages will appear here if there's any -->
+      <div class="error-message" id="errorMessage">
+        Oops! Something went wrong while submitting your style. Please try again.
+      </div>
+
+      <h2>Share Your Look</h2>
+      <form id="uploadForm" onsubmit="submitStyle(event)" novalidate>
+        <div class="form-group">
+          <label for="userName">Your Name or Username <span class="required">*</span></label>
+          <input 
+            type="text" 
+            id="userName" 
+            name="userName"
+            placeholder="How should we credit you?" 
+            required
+            minlength="2"
+            maxlength="50">
+          <span class="field-error" id="userName-error"></span>
+        </div>
+
+        <!-- Email input field -->
+        <div class="form-group">
+          <label for="userEmail">Your Email <span class="required">*</span></label>
+          <input 
+            type="email" 
+            id="userEmail" 
+            name="userEmail"
+            placeholder="your.email@example.com" 
+            required>
+          <span class="field-error" id="userEmail-error"></span>
+        </div>
+
+        <!-- Image upload field -->
+        <div class="form-group">
+          <label for="userImage">Upload Your Photo (Optional)</label>
+          <input 
+            type="file" 
+            id="userImage" 
+            name="userImage"
+            accept="image/jpeg,image/png,image/jpg,image/webp">
+          <span class="field-help" id="userImage-help">Accepted formats: JPG, PNG, WEBP (Max 5MB)</span>
+          <span class="field-error" id="userImage-error"></span>
+        </div>
+
+        <!-- Description textarea field -->
+        <div class="form-group">
+          <label for="userDescription">Tell Your Story <span class="required">*</span></label>
+          <textarea 
+            id="userDescription" 
+            name="userDescription"
+            placeholder="What's the story behind this look? Is it a thrift find? A DIY project? Your outfit inspiration? Be creative and authentic!" 
+            required
+            minlength="20"
+            maxlength="500"></textarea>
+          <span class="field-help" id="userDescription-help">Minimum 20 characters, maximum 500</span>
+          <span class="field-error" id="userDescription-error"></span>
+        </div>
+
+        <!-- Submit button -->
+        <div class="form-group">
+          <button type="submit">Share Your Style</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  
+  <!-- Footer section -->
+  <footer>
+    <p>Created by Eman Sultan</p>
+  </footer>
+
+  <script src="myScript.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>
